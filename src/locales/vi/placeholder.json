@@ -7,9 +7,20 @@
   "tai_dia_diem_cap": "Tỉnh Lạng Sơn",
   "so_dien_thoai": "Ví dụ: 0395398010",
   "email": "Ví dụ: nam@gmail.com",
+  "co_quan_cap": "Nơi cơ quan cấp",
 
   "so_giay_phep_kinh_doanh_van_tai": "Nhập số giấy phép kinh doanh vận tải",
   "tai_so_giay_phep_kinh_doanh_van_tai": "Nơi cấp số giấy phép kinh doanh vận tải",
+  "ma_so_thue": "Nhập mã số thuế",
+  "so_hoa_don_dien_tu": "Nhập số hoá đơn điện tử",
+  "so_to_khai_hai_quan_dien_tu": "Nhập số tờ khai hải quan điện tử",
+  "ma_ho_so_khai_le_phi_truoc_ba": "Nhập mã hồ sơ khai lệ phí trước bạ",
+  "so_seri_phieu_ktclxx": "Số seri phiếu KTCLXX",
+
+  "loai_xe": "Nhập loại xe",
+  "mau_son": "Nhập màu sơn",
+  "nhan_hieu": "Nhập nhãn hiệu",
+  "so_loai": "Nhập số loại",
 
   "so_may_1": "Nhập số máy 1",
   "so_may_2": "Nhập số máy 2",

@@ -1,10 +1,12 @@
 import { Form, Formik } from 'formik';
-import React, { useState } from 'react';
+import React, { Fragment, useRef, useState } from 'react';
 import { useTranslation } from 'react-i18next';
 import { Button } from 'reactstrap';
 import { AiOutlineSend } from 'react-icons/ai';
 import { IoRefreshOutline } from 'react-icons/io5';
 import { MdRateReview } from 'react-icons/md';
+import { TiArrowBack } from 'react-icons/ti';
+import { FaPrint } from 'react-icons/fa';
 
 import { validationDangKyXe } from 'constants/validationSchema';
 import FormChuXe from './Components/FormChuXe';
@@ -17,9 +19,11 @@ import FormLoaiXe from './Components/FormLoaiXe';
 import { PreviewMode } from 'constants/types';
 import Review from 'components/Review';
 import { initialValueForm } from 'constants/initialValues';
+import ReactToPrint from 'react-to-print';
 
 const HomePage = () => {
   //! State
+  const refDocument = useRef<any>(null);
   const { t } = useTranslation();
   const [previewMode, setPreviewMode] = useState(PreviewMode.editMode);
 
@@ -85,7 +89,23 @@ const HomePage = () => {
             </Form>
           </main>
         ) : (
-          <Review values={propsFormik.values} onBack={togglePreview} />
+          <Fragment>
+            <div className="review-container__actions">
+              <Button type="button" outline color="primary" onClick={togglePreview}>
+                <TiArrowBack /> {t('label:back')}
+              </Button>
+              <ReactToPrint
+                pageStyle="padding: 12px"
+                trigger={() => (
+                  <Button type="button" outline color="primary" className="ml-2">
+                    <FaPrint /> {t('label:In')}
+                  </Button>
+                )}
+                content={() => refDocument.current}
+              />
+            </div>
+            <Review refFormToPrint={(el: any) => (refDocument.current = el)} values={propsFormik.values} />
+          </Fragment>
         )
       }
     </Formik>

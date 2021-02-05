@@ -22,7 +22,7 @@ const FormSoMay = (propsFormik: any) => {
             component={InputField}
             label={t('label:loai_xe')}
             name="loaiXe"
-            placeholder={t('placeholder:so_may_1')}
+            placeholder={t('placeholder:loai_xe')}
           />
         </Col>
         <Col xs="12" md="3">
@@ -30,7 +30,7 @@ const FormSoMay = (propsFormik: any) => {
             component={InputField}
             label={t('label:mau_son')}
             name="mauSon"
-            placeholder={t('placeholder:so_may_1')}
+            placeholder={t('placeholder:mau_son')}
           />
         </Col>
         <Col xs="12" md="3">
@@ -38,7 +38,7 @@ const FormSoMay = (propsFormik: any) => {
             component={InputField}
             label={t('label:nhan_hieu')}
             name="nhanHieu"
-            placeholder={t('placeholder:so_may_1')}
+            placeholder={t('placeholder:nhan_hieu')}
           />
         </Col>
         <Col xs="12" md="3">
@@ -46,7 +46,7 @@ const FormSoMay = (propsFormik: any) => {
             component={InputField}
             label={t('label:so_loai')}
             name="soLoai"
-            placeholder={t('placeholder:so_may_1')}
+            placeholder={t('placeholder:so_loai')}
           />
         </Col>
       </Row>
