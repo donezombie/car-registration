@@ -1,0 +1,42 @@
+.id-container {
+  width: 100%;
+
+  .id-container__header {
+    display: flex;
+    align-items: center;
+
+    height: 30px;
+    background-color: #0069a6;
+    border-radius: 12px 12px 0px 0px;
+
+    padding-left: 12px;
+    color: $white-color;
+    font-weight: 600;
+  }
+
+  .id-container__info {
+    display: flex;
+    padding: 2rem;
+
+    > div {
+      padding: 0px 1rem;
+    }
+  }
+
+  .id-container__ava {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 30%;
+    > img {
+      width: 90%;
+      height: 90%;
+      object-fit: contain;
+    }
+  }
+
+  .id-container__content {
+    width: 70%;
+  }
+}

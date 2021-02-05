@@ -1,0 +1,195 @@
+@media print {
+  body {
+    width: 30cm;
+    height: 29.7cm;
+    /* change the margins as you want them to be. */
+  }
+}
+
+.page {
+  height: 1600px;
+}
+
+.review-container {
+  width: 30cm;
+  margin-left: auto;
+  margin-right: auto;
+
+  padding-top: 12px;
+  padding-bottom: 12px;
+
+  font-family: 'Times New Roman', Times, serif;
+  background-color: #fff;
+  -webkit-font-smoothing: auto;
+  line-height: normal;
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p {
+    margin: 0;
+  }
+
+  line-height: 1.25;
+
+  .underline {
+    display: inline;
+    border-bottom: 1px solid #000;
+    padding-bottom: 1px;
+  }
+
+  .each-row {
+    display: flex;
+    align-items: center;
+  }
+
+  .each-field {
+    display: flex;
+    align-items: center;
+
+    font-size: 1.25rem;
+    margin: 0.5rem 0;
+
+    .dot {
+      font-size: 1rem;
+      position: relative;
+      bottom: -7px;
+      .value {
+        bottom: 6px;
+        left: 15px;
+        font-size: 1.25rem;
+        position: absolute;
+      }
+    }
+
+    &.date {
+      .dot {
+        .value {
+          left: unset;
+          right: 10px;
+        }
+      }
+    }
+
+    .slash {
+      font-size: 1.5rem;
+    }
+  }
+
+  .box-container {
+    display: inline-flex;
+
+    .each-box {
+      position: relative;
+      padding: 5px;
+      border: 1px solid #000;
+      border-right: none;
+
+      width: 35px;
+      height: 35px;
+
+      text-align: center;
+
+      > svg {
+        font-size: 2rem;
+        position: absolute;
+        top: 0;
+        left: 0;
+      }
+
+      &:last-child {
+        border-right: 1px solid #000;
+      }
+    }
+  }
+
+  .review-container__actions {
+    width: 100%;
+    height: 50px;
+    padding: 1rem;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+  }
+
+  .review-container__header {
+    display: flex;
+    align-items: baseline;
+
+    .header-1,
+    .header-2 {
+      text-align: center;
+    }
+
+    .header-1 {
+      width: 70%;
+      h3,
+      h4 {
+        font-weight: bold;
+        font-size: x-large;
+      }
+      h3 {
+        text-transform: uppercase;
+      }
+      h4 {
+        display: inline;
+        border-bottom: 1px solid #000;
+        padding-bottom: 2px;
+      }
+      margin-left: 115px;
+    }
+
+    .header-2 {
+      width: 30%;
+
+      p {
+        font-size: smaller;
+      }
+
+      p:nth-child(1) {
+        font-weight: bold;
+      }
+    }
+  }
+
+  .review-container__title {
+    text-align: center;
+    margin: 1.5rem 0;
+    h3 {
+      font-weight: bold;
+      font-size: x-large;
+    }
+  }
+
+  .review-container__content {
+    font-size: larger;
+  }
+
+  .review-container__img {
+    font-size: 1.25rem;
+    margin: 4rem auto;
+    padding: 8px 18px;
+
+    border: 1px solid #000;
+
+    text-align: center;
+    max-width: 80%;
+  }
+
+  .review-container__commitment {
+    letter-spacing: 0.5px;
+  }
+
+  .review-container__signature {
+    display: flex;
+    justify-content: flex-end;
+    padding: 2rem 0;
+    > div {
+      text-align: center;
+    }
+  }
+}

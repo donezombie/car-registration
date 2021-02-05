@@ -1,0 +1,42 @@
+{
+  "giay_khai_dang_ky_xe": "Giấy khai đăng ký xe (vehicle registation declaration)",
+
+  "ten_chu_xe": "Tên chủ xe",
+  "dia_chi": "Địa chỉ",
+  "nam_sinh": "Năm sinh",
+  "so_cccd": "Số CCCD/CMND/Hộ chiếu của chủ xe",
+  "so_cccd_nguoi_lam_thu_tuc": "Số CCCD/CMND/Hộ chiếu của người làm thủ tục",
+  "dien_thoai": "Điện thoại",
+  "dien_thoai_nguoi_lam_thu_tuc": "Điện thoại của người làm thủ tục",
+  "cap_ngay": "Cấp ngày",
+  "tai": "Tại",
+  "email": "Email",
+
+  "so_giay_phep_kinh_doanh_van_tai": "Số giấy phép kinh doanh vận tải",
+  "so_seri_phieu_ktclxx": "Số seri phiếu KTCLXX",
+  "so_to_khai_hai_quan_dien_tu": "Số tờ khai hải quan điện tử",
+  "ma_ho_so_khai_le_phi_truoc_ba": "Mã hồ sơ khai lệ phí trước bạ",
+  "ma_so_thue": "Mã số thuế",
+  "so_hoa_don_dien_tu": "Số hoá đơn điện tử",
+
+  "so_may_1": "Số máy 1 (Engine N0)",
+  "so_may_2": "Số máy 2 (Engine N0)",
+  "so_khung": "Số khung (Chassis N0)",
+
+  "loai_xe": "Loại xe",
+  "mau_son": "Màu sơn",
+  "nhan_hieu": "Nhãn hiệu",
+  "so_loai": "Số loại",
+
+  "dang_ky_moi": "Đăng ký mới",
+  "dang_ky_sang_ten": "Đăng ký sang tên",
+  "dang_ky_tam_thoi": "Đăng ký tạm thời",
+
+  "doi_lai_cap_lai_dang_ky_xe": "Đổi lại, cấp lại đăng ký xe",
+  "doi_lai_cap_lai_bien_so_xe": "Đổi lại, cấp lại biển số xe",
+ 
+  "gui": "Gửi đi",
+  "reset": "Xoá form",
+  "review": "Xem trước",
+  "back": "Quay lại"
+}

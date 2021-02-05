@@ -1,0 +1,6 @@
+{
+  "must_required": "{{name}} là trường bắt buộc!",
+  "must_number": "{{name}} phải là dạng số!",
+  "invalid_phone": "Số điện thoại chưa đúng định dạng!",
+  "invalid_email": "Email chưa đúng định dạng!"
+}
