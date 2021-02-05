@@ -7,6 +7,7 @@ import { RouteBase } from 'constants/routeUrl';
 import DefaultLayout from 'layout/DefaultLayout';
 import ReviewPage from 'views/Review';
 
+console.log('App run!');
 const App: React.FC = () => {
   return (
     <Router>
