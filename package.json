@@ -2,6 +2,7 @@
   "name": "dzb-react-typescript-template",
   "version": "1.0.0",
   "private": true,
+  "homepage": "http://donezombie.github.io/car-registration",
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
@@ -52,7 +53,9 @@
     "format": "prettier --write ./src/** --ignore-unknown",
     "lint": "eslint . --ext ts --ext tsx --ext js",
     "type-check": "tsc --pretty --noEmit",
-    "build:css": ""
+    "build:css": "",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -78,6 +81,7 @@
     "eslint-plugin-graphql": "^4.0.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react-hooks": "^4.2.0",
+    "gh-pages": "^3.1.0",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.2",
     "postcss": "^8.2.1",
