@@ -1,0 +1,2 @@
+(this["webpackJsonpdzb-react-typescript-template"]=this["webpackJsonpdzb-react-typescript-template"]||[]).push([[5],{338:function(t,e,n){"use strict";n.r(e);var p=n(1),a=n.n(p);e.default=function(t){return a.a.createElement("div",null,"404 not found!")}}}]);
+//# sourceMappingURL=5.81d5f736.chunk.js.map

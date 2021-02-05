@@ -1,0 +1,33 @@
+{
+  "files": {
+    "main.css": "/car-registration/static/css/main.f39b25df.chunk.css",
+    "main.js": "/car-registration/static/js/main.57976a8d.chunk.js",
+    "main.js.map": "/car-registration/static/js/main.57976a8d.chunk.js.map",
+    "runtime-main.js": "/car-registration/static/js/runtime-main.02728416.js",
+    "runtime-main.js.map": "/car-registration/static/js/runtime-main.02728416.js.map",
+    "static/js/2.c7ddb280.chunk.js": "/car-registration/static/js/2.c7ddb280.chunk.js",
+    "static/js/2.c7ddb280.chunk.js.map": "/car-registration/static/js/2.c7ddb280.chunk.js.map",
+    "static/css/3.f17f00f9.chunk.css": "/car-registration/static/css/3.f17f00f9.chunk.css",
+    "static/js/3.d96dd493.chunk.js": "/car-registration/static/js/3.d96dd493.chunk.js",
+    "static/js/3.d96dd493.chunk.js.map": "/car-registration/static/js/3.d96dd493.chunk.js.map",
+    "static/js/4.75d31c28.chunk.js": "/car-registration/static/js/4.75d31c28.chunk.js",
+    "static/js/4.75d31c28.chunk.js.map": "/car-registration/static/js/4.75d31c28.chunk.js.map",
+    "static/js/5.81d5f736.chunk.js": "/car-registration/static/js/5.81d5f736.chunk.js",
+    "static/js/5.81d5f736.chunk.js.map": "/car-registration/static/js/5.81d5f736.chunk.js.map",
+    "index.html": "/car-registration/index.html",
+    "precache-manifest.ee86b7dec7d7bf38b2b4557bbe791b71.js": "/car-registration/precache-manifest.ee86b7dec7d7bf38b2b4557bbe791b71.js",
+    "service-worker.js": "/car-registration/service-worker.js",
+    "static/css/3.f17f00f9.chunk.css.map": "/car-registration/static/css/3.f17f00f9.chunk.css.map",
+    "static/css/main.f39b25df.chunk.css.map": "/car-registration/static/css/main.f39b25df.chunk.css.map",
+    "static/js/2.c7ddb280.chunk.js.LICENSE.txt": "/car-registration/static/js/2.c7ddb280.chunk.js.LICENSE.txt",
+    "static/js/3.d96dd493.chunk.js.LICENSE.txt": "/car-registration/static/js/3.d96dd493.chunk.js.LICENSE.txt",
+    "static/media/ava-default.png": "/car-registration/static/media/ava-default.7e3dbe23.png"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.02728416.js",
+    "static/css/3.f17f00f9.chunk.css",
+    "static/js/3.d96dd493.chunk.js",
+    "static/css/main.f39b25df.chunk.css",
+    "static/js/main.57976a8d.chunk.js"
+  ]
+}
