@@ -2,7 +2,6 @@
   "name": "dzb-react-typescript-template",
   "version": "1.0.0",
   "private": true,
-  "homepage": "https://donezombie.github.io/car-registration",
   "dependencies": {
     "@reduxjs/toolkit": "^1.4.0",
     "@testing-library/jest-dom": "^4.2.4",
