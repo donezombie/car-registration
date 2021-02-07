@@ -84,6 +84,21 @@
       }
     }
 
+    &.long {
+      display: inline-block;
+      overflow-wrap: anywhere;
+      .dot {
+        &::first-letter {
+          margin-left: 0.6rem !important;
+        }
+        display: block;
+        bottom: 0px;
+        font-size: 1.25rem;
+        border-bottom: 1px dotted #000;
+        text-decoration: none;
+      }
+    }
+
     .slash {
       font-size: 1.5rem;
     }
@@ -190,6 +205,34 @@
     padding: 2rem 0;
     > div {
       text-align: center;
+    }
+  }
+
+  .review-container__table {
+    table {
+      border-collapse: collapse;
+      width: 100%;
+      text-align: center;
+      tr > {
+        td {
+          &:nth-child(2) {
+            width: 40%;
+          }
+          &:nth-child(4),
+          &:nth-child(5) {
+            width: 15%;
+          }
+        }
+      }
+    }
+    table,
+    th,
+    td {
+      border: 1px solid black;
+    }
+
+    td {
+      padding: 6px;
     }
   }
 }

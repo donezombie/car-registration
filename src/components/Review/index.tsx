@@ -1,14 +1,12 @@
-import React, { Fragment, useEffect, useRef } from 'react';
+import React, { Fragment, useEffect } from 'react';
 
 import EachFieldWithDot from 'components/EachFieldWithDot';
 import EachFieldWithBox from 'components/EachFieldWithBox';
 import EachFieldDate from 'components/EachFieldDate';
 import { Formik } from 'formik';
-import { Button, Form } from 'reactstrap';
-import { useTranslation } from 'react-i18next';
+import { Form } from 'reactstrap';
 import { IoMdCheckmark } from 'react-icons/io';
-import { TypeCapLai, TypeDangKyXe } from 'constants/types';
-import ReactToPrint from 'react-to-print';
+import { TypeDangKyXe } from 'constants/types';
 
 interface ReviewI {
   values: {
@@ -20,10 +18,10 @@ interface ReviewI {
 const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
   //! State
   useEffect(() => {
-    window.scrollTo({
-      behavior: 'smooth',
-      top: 0,
-    });
+    // window.scrollTo({
+    //   behavior: 'smooth',
+    //   top: 0,
+    // });
   }, []);
 
   //! Render
@@ -303,12 +301,142 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
               <div className="review-container__content">
                 <p className="underline font-weight-bold">B. PHẦN KIỂM TRA XÁC ĐỊNH CỦA CƠ QUAN ĐĂNG KÝ XE</p>
                 <div className="each-row">
-                  <EachFieldWithDot label="BIỂN SỐ MỚI" dot={109} value={values.capNgayNguoiLamThuTuc} />;{' '}
+                  <EachFieldWithDot label="BIỂN SỐ MỚI" dot={109} />;{' '}
+                  <EachFieldWithDot label="BIỂN SỐ CŨ" dot={109} style={{ marginLeft: 14 }} />
+                </div>
+
+                <div className="review-container__img">
+                  Nơi dán bản chà số máy (Đăng ký tạm thời, đổi, cấp lại đăng ký, biển số không phải dán)
+                </div>
+
+                <h4 className="text-center mb-2 mt-2">THÔNG KÊ CHỨNG TỪ ĐĂNG KÝ XE</h4>
+                <div className="each-row">
+                  <EachFieldWithDot label="Kích thước bao: Dài" dot={68} value={values.capLaiBienSoXe} notTwoDots />
+                  m;
+                  <EachFieldWithDot label="Rộng" dot={68} style={{ marginLeft: 11 }} notTwoDots />
+                  m;
+                  <EachFieldWithDot label="Cao" dot={68} style={{ marginLeft: 11 }} notTwoDots /> m
+                </div>
+
+                <div className="each-row">
+                  <EachFieldWithDot label="Khối lượng bản thân" dot={104} />
+                  kg;
+                  <EachFieldWithDot label="Kích cỡ lốp" dot={104} style={{ marginLeft: 7 }} />
+                </div>
+
+                <div className="each-row">
+                  <EachFieldWithDot label="Màu sơn" dot={65} />;
+                  <EachFieldWithDot label="Năm sản xuất" dot={55} style={{ marginLeft: 8 }} />
+                  ;
+                  <EachFieldWithDot label="Dung tích xi lanh" dot={65} style={{ marginLeft: 8 }} />
+                  cm<sup>3</sup>
+                </div>
+
+                <div className="each-row">
+                  <EachFieldWithDot label="Khối lượng hàng chuyên chở" dot={88} />;
+                  <EachFieldWithDot label="Khối lượng kéo theo" dot={84} style={{ marginLeft: 8 }} />
+                  kg
+                </div>
+
+                <div className="each-row">
+                  <EachFieldWithDot label="Kích thước thùng" dot={97} />
+                  mm;
+                  <EachFieldWithDot label="Chiều dài cơ sở" dot={99} style={{ marginLeft: 8 }} />
+                  mm
+                </div>
+
+                <div className="each-row">
+                  <EachFieldWithDot label="Số chỗ ngồi" dot={75} />;
+                  <EachFieldWithDot label="Đứng" dot={76} style={{ marginLeft: 8 }} />;
+                  <EachFieldWithDot label="Nằm" dot={76} style={{ marginLeft: 8 }} />
+                </div>
+
+                <div className="review-container__table">
+                  <h4 className="text-center mb-2 mt-2">THÔNG KÊ CHỨNG TỪ ĐĂNG KÝ XE</h4>
+                  <table>
+                    <thead>
+                      <tr>
+                        <td>TT</td>
+                        <td>LOẠI CHỨNG TỪ</td>
+                        <td>CƠ QUAN CẤP</td>
+                        <td>SỐ CHỨNG TỪ</td>
+                        <td>NGÀY CẤP</td>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td>1</td>
+                        <td />
+                        <td />
+                        <td />
+                        <td />
+                      </tr>
+                      <tr>
+                        <td>2</td>
+                        <td />
+                        <td />
+                        <td />
+                        <td />
+                      </tr>
+                      <tr>
+                        <td>3</td>
+                        <td />
+                        <td />
+                        <td />
+                        <td />
+                      </tr>
+                      <tr>
+                        <td>4</td>
+                        <td />
+                        <td />
+                        <td />
+                        <td />
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+
+                <div className="d-flex justify-content-between text-center align-items-center mt-4 mb-3">
+                  <div>
+                    <p className="font-italic">Lạng Sơn, ngày.........tháng.........năm.........</p>
+                    <p>CÁN BỘ ĐĂNG KÝ XE</p>
+                    <p className="font-italic">(Ký, ghi rõ họ tên)</p>
+                  </div>
+
+                  <div>
+                    <p>ĐỘI TRƯỞNG</p>
+                    <p className="font-italic">(Ký, ghi rõ họ tên)</p>
+                  </div>
+
+                  <div className="mr-5">
+                    <p>TRƯỞNG PHÒNG</p>
+                    <p className="font-italic">(Ký tên và đóng dấu)</p>
+                  </div>
+                </div>
+
+                <p className="underline font-weight-bold">
+                  C. XÁC NHẬN THAY ĐỔI MÀU SƠN/XE CẢI TẠO CỦA CƠ QUAN ĐĂNG KÝ XE
+                </p>
+                <div className="each-row">
+                  <EachFieldWithDot label="Xác nhận chủ xe" dot={248} />
+                </div>
+                <div className="each-row">
+                  <EachFieldWithDot label="Địa chỉ" dot={267} />
+                </div>
+
+                <div className="each-row">
+                  <EachFieldWithDot label="Điện thoại" dot={122} />;
+                  <EachFieldWithDot label="Email" dot={122} style={{ marginLeft: 8 }} />
+                </div>
+
+                <div className="each-row">
                   <EachFieldWithDot
-                    label="BIỂN SỐ CŨ"
-                    dot={109}
-                    style={{ marginLeft: 14 }}
-                    value={values.taiNguoiLamThuTuc}
+                    label="Về các nội dung sau (3)"
+                    dot={800}
+                    longString
+                    value={
+                      'TestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTesttttttt'
+                    }
                   />
                 </div>
               </div>
