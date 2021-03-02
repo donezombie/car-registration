@@ -26,3 +26,16 @@ $breakpoints: (
     }
   }
 }
+
+@mixin fadeIn {
+  animation: fadeInAnimate 0.4s;
+}
+
+@keyframes fadeInAnimate {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}

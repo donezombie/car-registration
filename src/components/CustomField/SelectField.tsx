@@ -4,8 +4,8 @@ import CreatableSelect from 'react-select/creatable';
 import classNames from 'classnames';
 import Select from 'react-select';
 import { FormikProps, FormikValues } from 'formik';
-import Tooltip from 'components/Tooltips';
 import useGetClickOutside from 'hooks/useGetClickOutside';
+import Tooltips from 'components/Tooltips';
 
 const stylesForRemove = {
   multiValue: (base: any, state: any) => {
@@ -105,6 +105,7 @@ const SelectField: React.FC<SelectFieldI> = (props) => {
     placementTooltip,
   } = props;
   const ref = useRef(null);
+  const refContainer = useRef<any>(null);
   const { name, value } = field;
   const { errors, touched, setFieldValue, setFieldTouched } = form;
   const [isFocus, setFocus] = useState(false);
@@ -233,43 +234,41 @@ const SelectField: React.FC<SelectFieldI> = (props) => {
           }}
         />
       )}
-      {messageToolTip && (
-        <Tooltip
-          isOpen={isFocus}
-          target={name}
+      <div style={{ width: '100%', position: 'relative' }} ref={refContainer}>
+        <Tooltips
+          isOpen={isFocus && messageToolTip}
+          placementTooltip={placementTooltip}
           messageToolTip={messageToolTip}
-          placement={placementTooltip}
-          style={{ width: '100%' }}
         />
-      )}
-      <Select
-        {...field}
-        id={name}
-        ref={ref}
-        className={classNames({ 'is-invalid-input-select': errorField || (touched[name] && !!errors[name]) })}
-        onChange={isMulti ? handleSelectChangeMulti : handleSelectChange}
-        onBlur={handleBlur}
-        onMenuOpen={onFocus}
-        onMenuClose={handleBlur}
-        placeholder={placeholder}
-        options={options}
-        value={selectOption}
-        isClearable={isClearable}
-        isRtl={isRtl}
-        isSearchable={isSearchable}
-        isDisabled={isDisabled}
-        isLoading={isLoading}
-        isMulti={isMulti}
-        onKeyDown={onKeyDown}
-        onInputChange={onInputChange}
-        getOptionLabel={getOptionLabel}
-        getOptionValue={getOptionValue}
-        menuPortalTarget={menuPortalTarget}
-        styles={{ ...styles, ...stylesForRemove }}
-        noOptionsMessage={noOptionsMessage}
-        classNamePrefix="react-select"
-      />
-      {renderError()}
+        <Select
+          {...field}
+          id={name}
+          ref={ref}
+          className={classNames({ 'is-invalid-input-select': errorField || (touched[name] && !!errors[name]) })}
+          onChange={isMulti ? handleSelectChangeMulti : handleSelectChange}
+          onBlur={handleBlur}
+          onMenuOpen={onFocus}
+          onMenuClose={handleBlur}
+          placeholder={placeholder}
+          options={options}
+          value={selectOption}
+          isClearable={isClearable}
+          isRtl={isRtl}
+          isSearchable={isSearchable}
+          isDisabled={isDisabled}
+          isLoading={isLoading}
+          isMulti={isMulti}
+          onKeyDown={onKeyDown}
+          onInputChange={onInputChange}
+          getOptionLabel={getOptionLabel}
+          getOptionValue={getOptionValue}
+          menuPortalTarget={menuPortalTarget}
+          styles={{ ...styles, ...stylesForRemove }}
+          noOptionsMessage={noOptionsMessage}
+          classNamePrefix="react-select"
+        />
+        {renderError()}
+      </div>
     </Fragment>
   );
 };

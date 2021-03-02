@@ -91,13 +91,13 @@ const HomePage = () => {
         ) : (
           <Fragment>
             <div className="review-container__actions">
-              <Button type="button" outline color="primary" onClick={togglePreview}>
+              <Button type="button" color="primary" onClick={togglePreview}>
                 <TiArrowBack /> {t('label:back')}
               </Button>
               <ReactToPrint
                 pageStyle="padding: 12px"
                 trigger={() => (
-                  <Button type="button" outline color="primary" className="ml-2">
+                  <Button type="button" color="primary" className="ml-2">
                     <FaPrint /> {t('label:In')}
                   </Button>
                 )}

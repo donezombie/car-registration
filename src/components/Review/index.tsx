@@ -54,11 +54,11 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                 </p>
 
                 <div className="each-row">
-                  <EachFieldWithDot label="Tên chủ xe" dot={189} value={values.tenChuXe} />
-                  <EachFieldWithDot label="Năm sinh" dot={45} value={values.namSinh} />
+                  <EachFieldWithDot label="Tên chủ xe" dot={794} value={values.tenChuXe} />
+                  <EachFieldWithDot label="Năm sinh" dot={162} value={values.namSinh} />
                 </div>
 
-                <EachFieldWithDot label="Địa chỉ" dot={262} value={values.diaChi} />
+                <EachFieldWithDot label="Địa chỉ" dot={1070} value={values.diaChi} />
 
                 <EachFieldWithBox
                   label="Số CCCD/CMND/Hộ chiếu của chủ xe"
@@ -67,8 +67,8 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   values={values.cmndChuXe && values.cmndChuXe.split('')}
                 />
                 <div className="each-row">
-                  <EachFieldDate label="Cấp ngày" dot={20} value={values.capNgayChuXe} />;{' '}
-                  <EachFieldWithDot label="tại" dot={185} style={{ marginLeft: 8 }} value={values.taiChuXe} />
+                  <EachFieldDate label="Cấp ngày" dot={62} value={values.capNgayChuXe} />;{' '}
+                  <EachFieldWithDot label="tại" dot={810} style={{ marginLeft: 8 }} value={values.taiChuXe} />
                 </div>
 
                 <EachFieldWithBox
@@ -78,8 +78,8 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   values={values.cmndNguoiLamThuTuc && values.cmndNguoiLamThuTuc.split('')}
                 />
                 <div className="each-row">
-                  <EachFieldDate label="Cấp ngày" dot={20} value={values.capNgayNguoiLamThuTuc} />;{' '}
-                  <EachFieldWithDot label="tại" dot={185} style={{ marginLeft: 8 }} value={values.taiNguoiLamThuTuc} />
+                  <EachFieldDate label="Cấp ngày" dot={62} value={values.capNgayNguoiLamThuTuc} />;{' '}
+                  <EachFieldWithDot label="tại" dot={810} style={{ marginLeft: 8 }} value={values.taiNguoiLamThuTuc} />
                 </div>
 
                 <div className="each-row">
@@ -89,7 +89,7 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                     style={{ marginLeft: 139 }}
                     values={values.dienThoaiChuXe && values.dienThoaiChuXe.split('')}
                   />
-                  <EachFieldWithDot label="Email" dot={75} style={{ marginLeft: 22 }} value={values.emailChuXe} />
+                  <EachFieldWithDot label="Email" dot={319} style={{ marginLeft: 22 }} value={values.emailChuXe} />
                 </div>
 
                 <div className="each-row">
@@ -101,7 +101,7 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   />
                   <EachFieldWithDot
                     label="Email"
-                    dot={75}
+                    dot={319}
                     style={{ marginLeft: 22 }}
                     value={values.emailNguoiLamThuTuc}
                   />
@@ -131,7 +131,7 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   />
                   <EachFieldWithDot
                     label="Cơ quan cấp"
-                    dot={76}
+                    dot={322}
                     style={{ marginLeft: 24 }}
                     value={values.coQuanCapMaHoSoKhaiLePhiTruocBa}
                   />
@@ -146,7 +146,7 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   />
                   <EachFieldWithDot
                     label="Cơ quan cấp"
-                    dot={76}
+                    dot={322}
                     style={{ marginLeft: 24 }}
                     value={values.coQuanCapToKhaiHaiQuanDienTu}
                   />
@@ -161,7 +161,7 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   />
                   <EachFieldWithDot
                     label="Cơ quan cấp"
-                    dot={76}
+                    dot={322}
                     style={{ marginLeft: 24 }}
                     value={values.coQuanCapPhieuKTCLXX}
                   />
@@ -176,14 +176,14 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   />
                   <EachFieldDate
                     label="cấp ngày"
-                    dot={20}
+                    dot={62}
                     style={{ marginLeft: 17 }}
                     value={values.capGiayPhepKinhDoanhVanTai}
                   />
                   ;{' '}
                   <EachFieldWithDot
                     label="tại"
-                    dot={39}
+                    dot={224}
                     style={{ marginLeft: 5 }}
                     value={values.noiCungCapGiayPhepKinhDoanhVanTai}
                   />
@@ -216,10 +216,10 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                 </div>
 
                 <div className="each-row">
-                  <EachFieldWithDot label="Loại xe" dot={50} value={values.loaiXe} />;
-                  <EachFieldWithDot label="Màu sơn" dot={50} style={{ marginLeft: 5 }} value={values.mauSon} />;
-                  <EachFieldWithDot label="Nhãn hiệu" dot={50} style={{ marginLeft: 5 }} value={values.nhanHieu} />;
-                  <EachFieldWithDot label="Số loại" dot={50} style={{ marginLeft: 5 }} value={values.soLoai} />
+                  <EachFieldWithDot label="Loại xe" dot={202} value={values.loaiXe} />;
+                  <EachFieldWithDot label="Màu sơn" dot={202} style={{ marginLeft: 5 }} value={values.mauSon} />;
+                  <EachFieldWithDot label="Nhãn hiệu" dot={202} style={{ marginLeft: 5 }} value={values.nhanHieu} />;
+                  <EachFieldWithDot label="Số loại" dot={202} style={{ marginLeft: 5 }} value={values.soLoai} />
                 </div>
 
                 <div className="each-row justify-content-between" style={{ padding: '0 11px 0 0' }}>
@@ -252,7 +252,7 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   />
                   <EachFieldWithDot
                     label={`<span style="font-style: italic; font-weight: bold">Lý do</span>`}
-                    dot={195}
+                    dot={786}
                     style={{ marginLeft: 20 }}
                     value={values.lyDoCapLaiDangKyXe}
                   />
@@ -267,7 +267,7 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   />
                   <EachFieldWithDot
                     label={`<span style="font-style: italic; font-weight: bold">Lý do</span>`}
-                    dot={195}
+                    dot={786}
                     style={{ marginLeft: 20 }}
                     value={values.lyDoCapLaiBienSoXe}
                   />
@@ -301,8 +301,8 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
               <div className="review-container__content">
                 <p className="underline font-weight-bold">B. PHẦN KIỂM TRA XÁC ĐỊNH CỦA CƠ QUAN ĐĂNG KÝ XE</p>
                 <div className="each-row">
-                  <EachFieldWithDot label="BIỂN SỐ MỚI" dot={109} />;{' '}
-                  <EachFieldWithDot label="BIỂN SỐ CŨ" dot={109} style={{ marginLeft: 14 }} />
+                  <EachFieldWithDot label="BIỂN SỐ MỚI" dot={435} />;{' '}
+                  <EachFieldWithDot label="BIỂN SỐ CŨ" dot={435} style={{ marginLeft: 14 }} />
                 </div>
 
                 <div className="review-container__img">
@@ -311,44 +311,44 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
 
                 <h4 className="text-center mb-2 mt-2">THÔNG KÊ CHỨNG TỪ ĐĂNG KÝ XE</h4>
                 <div className="each-row">
-                  <EachFieldWithDot label="Kích thước bao: Dài" dot={68} value={values.capLaiBienSoXe} notTwoDots />
+                  <EachFieldWithDot label="Kích thước bao: Dài" dot={272} value={values.capLaiBienSoXe} notTwoDots />
                   m;
-                  <EachFieldWithDot label="Rộng" dot={68} style={{ marginLeft: 11 }} notTwoDots />
+                  <EachFieldWithDot label="Rộng" dot={272} style={{ marginLeft: 11 }} notTwoDots />
                   m;
-                  <EachFieldWithDot label="Cao" dot={68} style={{ marginLeft: 11 }} notTwoDots /> m
+                  <EachFieldWithDot label="Cao" dot={272} style={{ marginLeft: 11 }} notTwoDots /> m
                 </div>
 
                 <div className="each-row">
-                  <EachFieldWithDot label="Khối lượng bản thân" dot={104} />
+                  <EachFieldWithDot label="Khối lượng bản thân" dot={414} />
                   kg;
-                  <EachFieldWithDot label="Kích cỡ lốp" dot={104} style={{ marginLeft: 7 }} />
+                  <EachFieldWithDot label="Kích cỡ lốp" dot={414} style={{ marginLeft: 7 }} />
                 </div>
 
                 <div className="each-row">
-                  <EachFieldWithDot label="Màu sơn" dot={65} />;
-                  <EachFieldWithDot label="Năm sản xuất" dot={55} style={{ marginLeft: 8 }} />
+                  <EachFieldWithDot label="Màu sơn" dot={246} />;
+                  <EachFieldWithDot label="Năm sản xuất" dot={247} style={{ marginLeft: 8 }} />
                   ;
-                  <EachFieldWithDot label="Dung tích xi lanh" dot={65} style={{ marginLeft: 8 }} />
+                  <EachFieldWithDot label="Dung tích xi lanh" dot={247} style={{ marginLeft: 8 }} />
                   cm<sup>3</sup>
                 </div>
 
                 <div className="each-row">
-                  <EachFieldWithDot label="Khối lượng hàng chuyên chở" dot={88} />;
-                  <EachFieldWithDot label="Khối lượng kéo theo" dot={84} style={{ marginLeft: 8 }} />
+                  <EachFieldWithDot label="Khối lượng hàng chuyên chở" dot={343} />;
+                  <EachFieldWithDot label="Khối lượng kéo theo" dot={343} style={{ marginLeft: 8 }} />
                   kg
                 </div>
 
                 <div className="each-row">
-                  <EachFieldWithDot label="Kích thước thùng" dot={97} />
+                  <EachFieldWithDot label="Kích thước thùng" dot={390} />
                   mm;
-                  <EachFieldWithDot label="Chiều dài cơ sở" dot={99} style={{ marginLeft: 8 }} />
+                  <EachFieldWithDot label="Chiều dài cơ sở" dot={390} style={{ marginLeft: 8 }} />
                   mm
                 </div>
 
                 <div className="each-row">
-                  <EachFieldWithDot label="Số chỗ ngồi" dot={75} />;
-                  <EachFieldWithDot label="Đứng" dot={76} style={{ marginLeft: 8 }} />;
-                  <EachFieldWithDot label="Nằm" dot={76} style={{ marginLeft: 8 }} />
+                  <EachFieldWithDot label="Số chỗ ngồi" dot={303} />;
+                  <EachFieldWithDot label="Đứng" dot={303} style={{ marginLeft: 8 }} />;
+                  <EachFieldWithDot label="Nằm" dot={303} style={{ marginLeft: 8 }} />
                 </div>
 
                 <div className="review-container__table">
@@ -418,25 +418,23 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   C. XÁC NHẬN THAY ĐỔI MÀU SƠN/XE CẢI TẠO CỦA CƠ QUAN ĐĂNG KÝ XE
                 </p>
                 <div className="each-row">
-                  <EachFieldWithDot label="Xác nhận chủ xe" dot={248} />
+                  <EachFieldWithDot label="Xác nhận chủ xe" dot={994} />
                 </div>
                 <div className="each-row">
-                  <EachFieldWithDot label="Địa chỉ" dot={267} />
+                  <EachFieldWithDot label="Địa chỉ" dot={1070} />
                 </div>
 
                 <div className="each-row">
-                  <EachFieldWithDot label="Điện thoại" dot={122} />;
-                  <EachFieldWithDot label="Email" dot={122} style={{ marginLeft: 8 }} />
+                  <EachFieldWithDot label="Điện thoại" dot={302} />;
+                  <EachFieldWithDot label="Email" dot={674} style={{ marginLeft: 8 }} />
                 </div>
 
                 <div className="each-row">
                   <EachFieldWithDot
                     label="Về các nội dung sau (3)"
-                    dot={800}
-                    longString
-                    value={
-                      'TestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTestttttttTesttttttt'
-                    }
+                    dot={937}
+                    longString={true}
+                    value="                   "
                   />
                 </div>
               </div>

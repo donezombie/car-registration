@@ -1,8 +1,8 @@
-import React, { useCallback, useEffect, useState } from 'react';
+import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FormFeedback, FormGroup, Input, Label } from 'reactstrap';
-import Tooltip from 'components/Tooltips';
-import { TOTAL_CHAR_HO_CHIEU, typeInput } from 'constants/types';
-import { generatorInput } from 'helpers';
+import { typeInput } from 'constants/types';
+import useGetClickOutside from 'hooks/useGetClickOutside';
+import Tooltips from 'components/Tooltips';
 
 const InputField = (props: any) => {
   const {
@@ -23,17 +23,19 @@ const InputField = (props: any) => {
     required,
 
     messageToolTip,
-    placementTooltip,
+    placementTooltip = 'left',
   } = props;
 
   //! State
+  const ref = useRef<any>(null);
+  const refContainer = useRef<any>();
   const { name } = field;
   const { errors, touched } = form;
   const [isFocus, setFocus] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      setFocus(false);
+      // setFocus(false);
     };
 
     window.addEventListener('scroll', handleScroll);
@@ -42,6 +44,10 @@ const InputField = (props: any) => {
       window.removeEventListener('scroll', handleScroll);
     };
   }, []);
+
+  useGetClickOutside(refContainer, () => {
+    setFocus(false);
+  });
 
   useEffect(() => {
     //* Auto focus next input when user fill prev input
@@ -83,7 +89,6 @@ const InputField = (props: any) => {
 
   const onBlur = useCallback(
     (e) => {
-      setFocus(false);
       field.onBlur(e);
     },
     [field],
@@ -91,36 +96,10 @@ const InputField = (props: any) => {
 
   //! Render
   const renderInput = () => {
-    if (type === typeInput.CMND) {
-      return (
-        <div id={name} className="container-input" onClick={onFocus} onFocus={onFocus} onBlur={onBlur}>
-          {generatorInput(TOTAL_CHAR_HO_CHIEU).map((el, index) => (
-            <Input
-              key={`${index}`}
-              {...field}
-              // onClick={onFocus}
-              // onBlur={onBlur}
-              // onFocus={onFocus}
-              style={style}
-              className={`${className} px-3 py-3 placeholder-gray-400 text-gray-700 relative bg-white rounded text-sm shadow focus:shadow-outline w-full`}
-              onChange={onChangeCustomize ? (e) => onChangeCustomize(e, index, TOTAL_CHAR_HO_CHIEU) : field.onChange}
-              type={type}
-              maxLength={maxLength}
-              value={value}
-              placeholder={placeholder}
-              disabled={disabled}
-              invalid={invalid || (!!errors[name] && touched[name])}
-              onKeyDown={onKeyDown}
-              autoComplete="off"
-            />
-          ))}
-        </div>
-      );
-    }
-
     return (
       <Input
         {...field}
+        innerRef={ref}
         onClick={onFocus}
         onBlur={onBlur}
         onFocus={onFocus}
@@ -151,17 +130,14 @@ const InputField = (props: any) => {
           }}
         />
       )}
-      {messageToolTip && (
-        <Tooltip
-          isOpen={isFocus}
-          target={name}
-          messageToolTip={messageToolTip}
-          placement={placementTooltip}
-          style={{ width: '100%' }}
-        />
-      )}
-      <div style={{ width: '100%' }}>
+
+      <div style={{ width: '100%', position: 'relative' }} ref={refContainer}>
         {renderInput()}
+        <Tooltips
+          isOpen={isFocus && messageToolTip}
+          placementTooltip={placementTooltip}
+          messageToolTip={messageToolTip}
+        />
         {errors[name] && touched[name] && typeof errors[name] === 'string' && (
           <FormFeedback>{errors[name]}</FormFeedback>
         )}

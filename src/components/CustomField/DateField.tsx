@@ -1,9 +1,9 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import { FormFeedback, FormGroup, Label } from 'reactstrap';
-import Tooltip from 'components/Tooltips';
 import DatePicker, { registerLocale } from 'react-datepicker';
 import vi from 'date-fns/locale/vi';
 import useGetClickOutside from 'hooks/useGetClickOutside';
+import Tooltips from 'components/Tooltips';
 
 registerLocale('vi', vi);
 
@@ -20,26 +20,31 @@ const DateField = (props: any) => {
   } = props;
 
   //! State
+  const refContainer = useRef<any>(null);
   const datePickerRef = useRef(null);
   const { name } = field;
   const { errors, touched } = form;
   const [isFocus, setFocus] = useState(false);
 
+  useGetClickOutside(refContainer, () => {
+    setFocus(false);
+  });
+
   useGetClickOutside(datePickerRef, () => {
     setFocus(false);
   });
 
-  useEffect(() => {
-    const handleScroll = () => {
-      setFocus(false);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     setFocus(false);
+  //   };
 
-    window.addEventListener('scroll', handleScroll);
+  //   window.addEventListener('scroll', handleScroll);
 
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener('scroll', handleScroll);
+  //   };
+  // }, []);
 
   //! Function
   const onFocus = useCallback(() => {
@@ -73,17 +78,13 @@ const DateField = (props: any) => {
           }}
         />
       )}
-      {messageToolTip && (
-        <Tooltip
-          isOpen={isFocus}
-          target={name}
+
+      <div style={{ width: '100%', position: 'relative' }} ref={refContainer}>
+        <Tooltips
+          isOpen={isFocus && messageToolTip}
+          placementTooltip={placementTooltip}
           messageToolTip={messageToolTip}
-          placement={placementTooltip}
-          style={{ width: '100%' }}
-          className="tooltip"
         />
-      )}
-      <div style={{ width: '100%' }}>
         <DatePicker
           ref={datePickerRef}
           name={name}

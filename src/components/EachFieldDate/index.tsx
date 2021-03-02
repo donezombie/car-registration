@@ -18,19 +18,16 @@ const EachFieldDate: React.FC<EachFieldDateI> = ({ dot, label, style, value }) =
   return (
     <div className="each-field date" style={style}>
       <span>{label}:</span>
-      <span className="dot">
+      <span className="dot" style={{ width: dot }}>
         <span className="value">{convertOneToTwoString(day)}</span>
-        {generatorDot(dot)}
       </span>
       <span className="slash">/</span>
-      <span className="dot">
+      <span className="dot" style={{ width: dot }}>
         <span className="value">{convertOneToTwoString(month)}</span>
-        {generatorDot(dot)}
       </span>
       <span className="slash">/</span>
-      <span className="dot">
+      <span className="dot" style={{ width: dot }}>
         <span className="value">{convertOneToTwoString(year)}</span>
-        {generatorDot(dot)}
       </span>
     </div>
   );

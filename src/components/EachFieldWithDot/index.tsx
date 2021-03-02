@@ -1,5 +1,4 @@
 import React from 'react';
-import { generatorDot } from 'helpers';
 
 interface EachFieldWithDotI {
   dot: number;
@@ -15,11 +14,13 @@ const EachFieldWithDot: React.FC<EachFieldWithDotI> = ({ dot, label, style, valu
   if (longString) {
     return (
       <div className="each-field long" style={style}>
-        <span style={{ float: 'left' }}>
+        <span className="label">
           {label}
           {!notTwoDots && ':'}
         </span>
-        <span className="dot">{value}</span>
+        <span className="dot" style={{ width: dot }}>
+          {value}
+        </span>
       </div>
     );
   }
@@ -27,9 +28,8 @@ const EachFieldWithDot: React.FC<EachFieldWithDotI> = ({ dot, label, style, valu
   return (
     <div className={`each-field`} style={style}>
       <span dangerouslySetInnerHTML={{ __html: label }} /> {!notTwoDots && ':'}
-      <span className="dot">
+      <span className="dot" style={{ width: dot }}>
         <span className="value">{value}</span>
-        {generatorDot(dot)}
       </span>
     </div>
   );

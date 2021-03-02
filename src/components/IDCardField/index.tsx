@@ -11,7 +11,14 @@ import { ProvinceData } from 'constants/index';
 import SelectField from 'components/CustomField/SelectField';
 import { convertToFormSelect, suppressNonNumericInput } from 'helpers';
 import { TypeUser } from 'constants/types';
-import { TooltipForCapNgay, TooltipForChuXe, TooltipForCMND, TooltipForNoiCap } from 'constants/dataTooltip';
+import {
+  TooltipForCapNgay,
+  TooltipForTen,
+  TooltipForCMND,
+  TooltipForDiaDiemCap,
+  TooltipForDiaChi,
+  TooltipForNamSinh,
+} from 'constants/dataTooltip';
 
 interface IDCardI {
   nameFieldCMND: string;
@@ -63,7 +70,7 @@ const IDCard: React.FC<IDCardI> = ({
                   name={nameFieldTenChuXe}
                   label={`${t('label:ten_chu_xe')}`}
                   placeholder={`${t('placeholder:ten_chu_xe')}`}
-                  messageToolTip={<TooltipForChuXe />}
+                  messageToolTip={<TooltipForTen />}
                   placementTooltip="left"
                   required
                 />
@@ -75,8 +82,8 @@ const IDCard: React.FC<IDCardI> = ({
                   name={nameFieldNamSinh}
                   label={`${t('label:nam_sinh')}`}
                   placeholder={`${t('placeholder:nam_sinh')}`}
-                  messageToolTip={<TooltipForChuXe />}
                   onKeyDown={suppressNonNumericInput}
+                  messageToolTip={<TooltipForNamSinh />}
                   placementTooltip="left"
                   required
                 />
@@ -88,6 +95,8 @@ const IDCard: React.FC<IDCardI> = ({
                   name={nameFieldDiaChi}
                   label={`${t('label:dia_chi')}`}
                   placeholder={`${t('placeholder:dia_chi')}`}
+                  messageToolTip={<TooltipForDiaChi />}
+                  placementTooltip="left"
                 />
               </Col>
             </Row>
@@ -97,7 +106,7 @@ const IDCard: React.FC<IDCardI> = ({
             name={nameFieldCMND}
             label={labelFieldCMND}
             placeholder={t('placeholder:so_cccd')}
-            messageToolTip={TooltipForCMND}
+            messageToolTip={<TooltipForCMND />}
             placementTooltip="left"
             onKeyDown={suppressNonNumericInput}
             maxLength={12}
@@ -110,7 +119,7 @@ const IDCard: React.FC<IDCardI> = ({
                 name={nameFieldCapNgay}
                 label={`${t('label:cap_ngay')}`}
                 placeholder={`${t('placeholder:cap_ngay')}`}
-                messageToolTip={TooltipForCapNgay}
+                messageToolTip={<TooltipForCapNgay />}
                 placementTooltip="left"
                 required
               />
@@ -122,7 +131,7 @@ const IDCard: React.FC<IDCardI> = ({
                 options={convertToFormSelect(ProvinceData)}
                 label={`${t('label:tai')}`}
                 placeholder={`${t('placeholder:tai_dia_diem_cap')}`}
-                messageToolTip={TooltipForNoiCap}
+                messageToolTip={<TooltipForDiaDiemCap />}
                 placementTooltip="left"
                 required
               />

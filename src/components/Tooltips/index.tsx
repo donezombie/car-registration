@@ -1,14 +1,21 @@
 import React from 'react';
-import { Tooltip, TooltipProps } from 'reactstrap';
+import { Spinner } from 'reactstrap';
 
-const Tooltips: React.FC<TooltipProps> = (props) => {
-  const { target, messageToolTip, isOpen, style, toggle, placement } = props;
+const Tooltips = (props: any) => {
+  const { messageToolTip, isOpen, style, placementTooltip } = props;
 
-  return (
-    <Tooltip style={style} placement={placement} isOpen={isOpen} target={target} toggle={toggle}>
-      {messageToolTip}
-    </Tooltip>
-  );
+  if (isOpen) {
+    return (
+      <div style={style} className={`tooltip-customize fadeIn ${placementTooltip}`}>
+        <div className="loading">
+          <Spinner color="primary" />
+        </div>
+        <div className="content">{messageToolTip}</div>
+      </div>
+    );
+  }
+
+  return null;
 };
 
 export default React.memo(Tooltips);
@@ -18,5 +25,5 @@ Tooltips.defaultProps = {
   placement: 'auto',
   isOpen: false,
   toggle: () => {},
-  messageTooltip: '',
+  messageToolTip: '',
 };
