@@ -64,6 +64,30 @@
     font-size: 1.25rem;
     margin: 0.5rem 0;
 
+    // For long dot
+    .label {
+      top: 5px;
+      background-color: #fff;
+      position: absolute;
+    }
+
+    .row-dot {
+      width: 100%;
+      height: 30px;
+      display: inline-flex;
+      border-bottom: 2px dotted #000;
+
+      .value {
+        padding-top: 5px;
+      }
+      &:nth-child(1) {
+        .value {
+          padding-left: 200px;
+        }
+      }
+    }
+    //_____
+
     .dot {
       border-bottom: 2px dotted #000;
       font-size: 1rem;

@@ -7,6 +7,7 @@ import { Formik } from 'formik';
 import { Form } from 'reactstrap';
 import { IoMdCheckmark } from 'react-icons/io';
 import { TypeDangKyXe } from 'constants/types';
+import EachRowWithDot from 'components/EachRowWithDot';
 
 interface ReviewI {
   values: {
@@ -396,7 +397,10 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                   </table>
                 </div>
 
-                <div className="d-flex justify-content-between text-center align-items-center mt-4 mb-3">
+                <div
+                  className="d-flex justify-content-between text-center align-items-center mt-4"
+                  style={{ marginBottom: 200 }}
+                >
                   <div>
                     <p className="font-italic">Lạng Sơn, ngày.........tháng.........năm.........</p>
                     <p>CÁN BỘ ĐĂNG KÝ XE</p>
@@ -430,12 +434,21 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                 </div>
 
                 <div className="each-row">
-                  <EachFieldWithDot
-                    label="Về các nội dung sau (3)"
-                    dot={937}
-                    longString={true}
-                    value="                   "
-                  />
+                  <EachRowWithDot row={3} label="Về các nội dung sau (3)" value="ahaihaiahihai" />
+                </div>
+
+                <div className="d-flex justify-content-between text-center align-items-center mt-4 mb-3">
+                  <div>
+                    <p className="font-italic">Lạng Sơn, ngày.........tháng.........năm.........</p>
+                    <p>CÁN BỘ ĐĂNG KÝ XE</p>
+                    <p className="font-italic">(Ký, ghi rõ họ tên)</p>
+                  </div>
+
+                  <div className="mr-5">
+                    <p className="font-italic">Lạng Sơn, ngày.........tháng.........năm.........</p>
+                    <p>TRƯỞNG PHÒNG</p>
+                    <p className="font-italic">(Ký tên và đóng dấu)</p>
+                  </div>
                 </div>
               </div>
             </div>
