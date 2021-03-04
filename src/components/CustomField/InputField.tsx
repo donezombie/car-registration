@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useRef, useState } from 'react';
+import React, { SyntheticEvent, useCallback, useEffect, useRef, useState } from 'react';
 import { FormFeedback, FormGroup, Input, Label } from 'reactstrap';
 import { typeInput } from 'constants/types';
 import useGetClickOutside from 'hooks/useGetClickOutside';
@@ -94,6 +94,14 @@ const InputField = (props: any) => {
     [field],
   );
 
+  const onKeyDownFunc = (e: any) => {
+    //* User press tab button on keyboard
+    if (e.keyCode === 9) {
+      setFocus(false);
+    }
+    onKeyDown && onKeyDown(e);
+  };
+
   //! Render
   const renderInput = () => {
     return (
@@ -113,7 +121,7 @@ const InputField = (props: any) => {
         placeholder={placeholder}
         disabled={disabled}
         invalid={invalid || (!!errors[name] && touched[name])}
-        onKeyDown={onKeyDown}
+        onKeyDown={onKeyDownFunc}
         autoComplete="off"
       />
     );
