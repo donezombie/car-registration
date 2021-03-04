@@ -4,7 +4,7 @@ interface EachRowWithDotI {
   label: string;
   style?: object;
   value?: string;
-  notTwoDots?: boolean;
+  noColon?: boolean;
   longString?: boolean;
   row: number;
 }

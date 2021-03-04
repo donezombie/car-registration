@@ -312,11 +312,11 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
 
                 <h4 className="text-center mb-2 mt-2">THÔNG KÊ CHỨNG TỪ ĐĂNG KÝ XE</h4>
                 <div className="each-row">
-                  <EachFieldWithDot label="Kích thước bao: Dài" dot={272} value={values.capLaiBienSoXe} notTwoDots />
+                  <EachFieldWithDot label="Kích thước bao: Dài" dot={272} value={values.capLaiBienSoXe} noColon />
                   m;
-                  <EachFieldWithDot label="Rộng" dot={272} style={{ marginLeft: 11 }} notTwoDots />
+                  <EachFieldWithDot label="Rộng" dot={272} style={{ marginLeft: 11 }} noColon />
                   m;
-                  <EachFieldWithDot label="Cao" dot={272} style={{ marginLeft: 11 }} notTwoDots /> m
+                  <EachFieldWithDot label="Cao" dot={272} style={{ marginLeft: 11 }} noColon /> m
                 </div>
 
                 <div className="each-row">
@@ -431,6 +431,16 @@ const Review: React.FC<ReviewI> = ({ values, refFormToPrint }) => {
                 <div className="each-row">
                   <EachFieldWithDot label="Điện thoại" dot={302} />;
                   <EachFieldWithDot label="Email" dot={674} style={{ marginLeft: 8 }} />
+                </div>
+
+                <div className="each-row">
+                  <EachFieldWithDot label="Đã khai báo hồi" dot={50} />
+                  <EachFieldWithDot label="giờ" dot={50} noColon style={{ marginLeft: 2 }} />
+                  <EachFieldWithDot label="phút" dot={50} noColon style={{ marginLeft: 2 }} />;
+                  <EachFieldWithDot label="Ngày" dot={50} style={{ marginLeft: 8 }} noColon />
+                  <EachFieldWithDot label="tháng" dot={50} style={{ marginLeft: 2 }} noColon />
+                  <EachFieldWithDot label="năm" dot={50} style={{ marginLeft: 2 }} noColon />;
+                  <EachFieldWithDot label="Tại" dot={450} style={{ marginLeft: 8 }} />
                 </div>
 
                 <div className="each-row">

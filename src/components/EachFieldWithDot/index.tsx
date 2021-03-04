@@ -5,18 +5,18 @@ interface EachFieldWithDotI {
   label: string;
   style?: object;
   value?: string;
-  notTwoDots?: boolean;
+  noColon?: boolean;
   longString?: boolean;
 }
 
-const EachFieldWithDot: React.FC<EachFieldWithDotI> = ({ dot, label, style, value, notTwoDots, longString }) => {
+const EachFieldWithDot: React.FC<EachFieldWithDotI> = ({ dot, label, style, value, noColon, longString }) => {
   //! Render
   if (longString) {
     return (
       <div className="each-field long" style={style}>
         <span className="label">
           {label}
-          {!notTwoDots && ':'}
+          {!noColon && ':'}
         </span>
         <span className="dot" style={{ width: dot }}>
           {value}
@@ -27,7 +27,7 @@ const EachFieldWithDot: React.FC<EachFieldWithDotI> = ({ dot, label, style, valu
 
   return (
     <div className={`each-field`} style={style}>
-      <span dangerouslySetInnerHTML={{ __html: label }} /> {!notTwoDots && ':'}
+      <span dangerouslySetInnerHTML={{ __html: label }} /> {!noColon && ':'}
       <span className="dot" style={{ width: dot }}>
         <span className="value">{value}</span>
       </span>
